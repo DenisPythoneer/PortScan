@@ -42,7 +42,7 @@
 
     Введите IP-адрес или доменное имя для сканирования.
 
-![Пример использования](https://raw.githubusercontent.com/DenisPythoneer/PortScan/main/image/ScreenshotTno.png)
+![Пример использования](https://raw.githubusercontent.com/DenisPythoneer/PortScan/main/image/ScreenshotTwo.png)
 
 ### ⚙️ Настройка
 
