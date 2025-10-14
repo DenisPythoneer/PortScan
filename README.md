@@ -1,6 +1,7 @@
 ![PortScan](https://img.shields.io/badge/Version-2.0-blue)
 ![Python](https://img.shields.io/badge/Python-3.9+-green)
 ![Linux](https://img.shields.io/badge/Linux-Fedora%20%7C%20Arch%20%7C%20Kali-blue)
+![Cybersecurity](https://img.shields.io/badge/Cybersecurity-Pentesting-red)
 ![Port Scanner](https://img.shields.io/badge/Port%20Scanner-Nmap%20%7C%20Custom-blue)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
