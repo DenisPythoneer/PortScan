@@ -1,19 +1,16 @@
-import socket
-from datetime import datetime
-from pystyle import Colors
 from colorama import Fore, init
-import os
-import platform
-from pathlib import Path
 from datetime import datetime
-
+from datetime import datetime
 from config import ports_dict
-
+from pystyle import Colors
+from pathlib import Path
+import platform
+import socket
+import os
 
 Success = Colors.green + "[+]" + Colors.reset
 Error = Colors.red + "[-]" + Colors.reset
 Info = Colors.blue + "[*]" + Colors.reset
-
 
 init(autoreset=True)
 
