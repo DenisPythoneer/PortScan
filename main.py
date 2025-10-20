@@ -15,6 +15,24 @@ Info = Colors.blue + "[*]" + Colors.reset
 init(autoreset=True)
 
 
+def display_banner():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    
+    print(Fore.CYAN + f"""
+     ███████████                      █████     █████████                               
+    ░░███░░░░░███                    ░░███     ███░░░░░███                              
+    ░███    ░███  ██████  ████████  ███████  ░███    ░░░   ██████   ██████   ████████  
+    ░██████████  ███░░███░░███░░███░░░███░   ░░█████████  ███░░███ ░░░░░███ ░░███░░███ 
+    ░███░░░░░░  ░███ ░███ ░███ ░░░   ░███     ░░░░░░░░███░███ ░░░   ███████  ░███ ░███ 
+    ░███        ░███ ░███ ░███       ░███ ███ ███    ░███░███  ███ ███░░███  ░███ ░███ 
+    █████       ░░██████  █████      ░░█████ ░░█████████ ░░██████ ░░████████ ████ █████
+    ░░░░░         ░░░░░░  ░░░░░        ░░░░░   ░░░░░░░░░   ░░░░░░   ░░░░░░░░ ░░░░ ░░░░░ 
+                                                                                    
+                            [https://github.com/DenisPythoneer]
+                                        {Fore.RED + 'FSOCIETY'}                                                                                   
+    """)
+
+
 def get_desktop_path():
     home = Path.home()
     if platform.system() == "Windows":
@@ -113,27 +131,9 @@ def scan_ports(host, ports_dict):
 
     save_results(host, open_ports)
     return open_ports
-
-
-def display_banner():
-    os.system('cls' if os.name == 'nt' else 'clear')
-    
-    print(Fore.CYAN + f"""
-     ███████████                      █████     █████████                               
-    ░░███░░░░░███                    ░░███     ███░░░░░███                              
-    ░███    ░███  ██████  ████████  ███████  ░███    ░░░   ██████   ██████   ████████  
-    ░██████████  ███░░███░░███░░███░░░███░   ░░█████████  ███░░███ ░░░░░███ ░░███░░███ 
-    ░███░░░░░░  ░███ ░███ ░███ ░░░   ░███     ░░░░░░░░███░███ ░░░   ███████  ░███ ░███ 
-    ░███        ░███ ░███ ░███       ░███ ███ ███    ░███░███  ███ ███░░███  ░███ ░███ 
-    █████       ░░██████  █████      ░░█████ ░░█████████ ░░██████ ░░████████ ████ █████
-    ░░░░░         ░░░░░░  ░░░░░        ░░░░░   ░░░░░░░░░   ░░░░░░   ░░░░░░░░ ░░░░ ░░░░░ 
-                                                                                    
-                            [https://github.com/DenisPythoneer]
-                                        {Fore.RED + 'FSOCIETY'}                                                                                   
-    """)
     
 
-def host_input():
+def main():
     display_banner()
     
     host = input(f"\n{Info} Введите IP-адресс или домен: ")
@@ -142,11 +142,7 @@ def host_input():
             scan_ports(host, ports_dict)
     except socket.gaierror:
         print(f"\n{Error} Ошибка: некорректный IP или домен!" + Colors.reset)
-
-
-def main():
-    host_input()
-
+        
 
 if __name__ == "__main__":
     try:
